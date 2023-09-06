@@ -78,11 +78,9 @@ export function (someClosureVariable, someOtherClosureVariable) {
    * @static
    * @method
    */
-  function _someMethod () {
+  return function _someMethod () {
     someClosureVariable.a = 5;
-  }
-  _someMethod.options = { ... };
-  return _someMethod;
+  }l
 
 };
 ```
