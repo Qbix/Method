@@ -14,7 +14,7 @@ Whenever you have code like this:
 
 ```
 /**
- * @class Q.SomeObject for example
+ * @class SomeObject for example
  */
 
 SomeObject = {
@@ -45,19 +45,19 @@ SomeObject.SubObject.anotherMethod.options = { ... };
 you would refactor it like this:
 
 ```
-SomeObject = Q.Method.define({
+SomeObject = Method.define({
 
-  someMethod: Q.Method.stub,
+  someMethod: Method.stub,
 
-  someOtherMethod: Q.Method.stub,
+  someOtherMethod: Method.stub,
 
-  SubObject: Q.Method.define({
+  SubObject: Method.define({
 
-     anotherMethod: Q.Method.stub
+     anotherMethod: Method.stub
 
-  }, '{{MyPlugin}}/js/methods/SomeObject/SubObject')
+  }, '/js/methods/SomeObject/SubObject')
 
-}, '{{MyPlugin}}/js/methods/SomeObject');
+}, '/js/methods/SomeObject');
 
 // options will be moved to the individual JS files
 ```
@@ -68,7 +68,7 @@ you would move these methods to a file named MyPlugin/js/methods/SomeObject/some
 export function (someClosureVariable, someOtherClosureVariable) {
 
   /**
-   * @class @.Users // make sure YUIDoc categorizes it correctly
+   * @class Users // or whatever your documentation is
    */
 
   /** 
